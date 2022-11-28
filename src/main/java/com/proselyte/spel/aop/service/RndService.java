@@ -12,7 +12,8 @@ public class RndService {
         System.out.println("called RndService");
         try {
             Thread.sleep(500);
-        }catch (InterruptedException ignored) {}
+        } catch (InterruptedException ignored) {
+        }
         return UUID.randomUUID().toString();
     }
 }

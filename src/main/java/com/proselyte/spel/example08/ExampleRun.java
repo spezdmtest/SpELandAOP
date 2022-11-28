@@ -21,7 +21,7 @@ public class ExampleRun {
         StandardEvaluationContext evaluationContext = new StandardEvaluationContext();
         evaluationContext.setVariable("newValues", simpleContext.values);
 
-        Object result = parser.parseExpression("#newValues.?[#this>'ccd']")
+        Object result = parser.parseExpression("#newValues.?[#this>'bbb']")
                 .getValue(evaluationContext);
         System.out.println(result);
     }

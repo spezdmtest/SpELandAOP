@@ -9,7 +9,6 @@ import java.util.UUID;
 public class ExampleRun {
     public static void main(String[] args) throws NoSuchMethodException {
         ExpressionParser parser = new SpelExpressionParser();
-
         StandardEvaluationContext evaluationContext = new StandardEvaluationContext();
         evaluationContext.registerFunction("rndUuid",
                 ServiceRnd.class.getDeclaredMethod("uuid", String.class));
@@ -32,11 +31,10 @@ public class ExampleRun {
                     .getValue(evaluationContext, String.class);
             System.out.println(value);
         }
-
     }
 
     public static class ServiceRnd {
-        public static String uuid(String prefix) {
+        static String uuid(String prefix) {
             return prefix + " - " + UUID.randomUUID().toString();
         }
     }

@@ -12,7 +12,6 @@ public class SpELApplication {
     public static void main(String[] args) {
 
         ConfigurableApplicationContext context = SpringApplication.run(SpELApplication.class, args);
-
         System.out.println("************************************");
         RndService rndService = context.getBean(RndService.class);
         System.out.println(rndService.getString());
@@ -21,6 +20,10 @@ public class SpELApplication {
         System.out.println("************************************");
         PredefinedService predefinedService = context.getBean(PredefinedService.class);
         System.out.println(predefinedService.getString());
+        System.out.println("************************************");
+
+        System.out.println("************************************");
+        System.out.println(predefinedService.getStringThroughSelfLink());
         System.out.println("************************************");
 
         System.out.println("************************************");

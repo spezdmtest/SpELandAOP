@@ -20,5 +20,4 @@ public class MeasureAspect {
         System.out.println("Log measure of method " + pjp.toLongString() + " time mills " + (timeAfter-timeBefore));
         return value;
     }
-
 }
